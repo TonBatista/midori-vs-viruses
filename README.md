@@ -8,7 +8,7 @@ Uma campanha contínua em quatro mundos: o portal no fim do mundo digital leva �
 - Computador: Espaço ou seta para cima pula; Shift acelera; P/Esc pausa.
 - Jogue com o celular na horizontal. Abra o link HTTPS no Safari ou Chrome.
 - Na floresta, a corrida é 15% mais rápida. Há mais buracos, cipós perigosos e vírus voadores sinalizados antes de atacar.
-- No céu, Midori pilota um avião tecnológico entre nuvens, obstáculos aéreos e vírus alados. Toque para subir; solte para descer com suavidade.
+- No céu, Midori pilota um avião tecnológico entre nuvens e vírus alados. Segure à esquerda para o turbo e toque à direita para disparar; o avião mantém voo estável.
 - Na estação orbital, Midori pilota uma nave leve por um anel de satélite, com gravidade reduzida, obstáculos luminosos e vírus em órbita.
 - Safe Money dá 100 pontos. O ícone K recupera uma vida, até cinco. Não há escudo.
 
