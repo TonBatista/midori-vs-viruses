@@ -8,15 +8,15 @@ Uma campanha contínua em cinco mundos: o portal no fim do mundo digital leva à
 - Computador: Espaço ou seta para cima pula; Shift acelera; P/Esc pausa.
 - Jogue com o celular na horizontal. Abra o link HTTPS no Safari ou Chrome.
 - Na floresta, a corrida é 15% mais rápida. Há mais buracos, cipós perigosos e vírus voadores sinalizados antes de atacar.
-- No céu, Midori pilota um avião tecnológico entre nuvens e vírus alados. Segure à esquerda para o turbo e toque à direita para disparar; o avião mantém voo estável.
+- No céu, Midori pilota um hidroavião verde com óculos e cachecol lilás. O direcional esquerdo move nos quatro sentidos; segurar uma direção ativa turbo. Segure ATIRAR à direita para rajadas. No teclado: setas/WASD e Espaço para tiro.
 - Na estação orbital, Midori pilota uma nave leve por um anel de satélite, com gravidade reduzida, obstáculos luminosos e vírus em órbita.
-- No núcleo do glitch, pule sobre o núcleo luminoso do chefão para causar dano. Ele alterna chuva de glitch, onda hexagonal e raio duplo; a barra de energia mostra quanto falta.
+- No núcleo do glitch, desvie dos ataques sinalizados. Durante a abertura, pule no vírus conectado ao chefão para causar dano. Ele alterna chuva de glitch, onda hexagonal e raio duplo; a barra de energia mostra quanto falta.
 - Safe Money dá 100 pontos. O ícone K recupera uma vida, até cinco. Não há escudo.
 
 Para publicar no GitHub Pages: Settings → Pages → Deploy from a branch → main → / (root) → Save. O arquivo de entrada é index.html.
 
-Sem instalação, servidor de jogo ou dependências externas. Pontuação recorde salva apenas no próprio navegador; não há ranking online.
+Na capa, use “Treinar voo” e “Enfrentar chefão” para testar diretamente. Sem instalação, servidor de jogo ou dependências externas. Pontuação recorde salva apenas no próprio navegador; não há ranking online.
 
-Verificados: fases anteriores, transição automática, arena do chefão, três ataques, barra de energia, dano por salto, pontuação, vidas, colisões dos cipós e inicialização sem APIs opcionais de tela cheia/orientação. Não validado em iPhone físico.
+Testados por simulação: voo nos quatro sentidos, diagonais, turbo, limites sem dano, controles simultâneos, cancelamento/pausa, tiros acertando inimigos, transições céu/orbital/chefão e vitória contra os três ataques. Não validado em iPhone físico.
 
 As marcas e artes permanecem pertencentes aos respectivos titulares. A fonte Bangers usa SIL OFL; a licença está incorporada ao HTML.
