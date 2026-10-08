@@ -223,7 +223,7 @@ function beginStick(e){if(!isFlight()||state!=='playing'||portrait||flightPointe
 function endFlightPointer(e){shotPointers.delete(e.pointerId);if(e.pointerId===flightPointer){flightPointer=null;stickX=stickY=flightHold=0;$('flightKnob').style.transform='translate(0px,0px)';}}
 function beginFire(e){if(!isFlight()||state!=='playing'||portrait)return;e.preventDefault();audioInit();shotPointers.add(e.pointerId);e.currentTarget.setPointerCapture?.(e.pointerId);fire();}
 function flightVector(){let x=stickX+(flightKeys.has('ArrowRight')||flightKeys.has('KeyD')?1:0)-(flightKeys.has('ArrowLeft')||flightKeys.has('KeyA')?1:0),y=stickY+(flightKeys.has('ArrowDown')||flightKeys.has('KeyS')?1:0)-(flightKeys.has('ArrowUp')||flightKeys.has('KeyW')?1:0);const len=Math.hypot(x,y);return {x:x/Math.max(1,len),y:y/Math.max(1,len),active:len>.05};}
-function setPlayControls(){const active=state==='playing';$('jump').hidden=!active||isFlight();$('shoot').hidden=!active||!isFlight();$('boost').hidden=!active||isFlight();$('flightPad').hidden=!active||!isFlight();$('game').classList.toggle('flying',active&&isFlight());}
+function setPlayControls(){const active=state==='playing';$('jump').hidden=!active||isFlight();$('shoot').hidden=!active||!isFlight();$('boost').hidden=!active||isFlight()||isBoss();$('flightPad').hidden=!active||!isFlight();$('game').classList.toggle('flying',active&&isFlight());}
 function updateSky(dt){
  const input=flightVector();flightHold=input.active?flightHold+dt:0;boosting=flightHold>.45;speed+=(levelSpeed()*(boosting?1.2:1)-speed)*(1-Math.exp(-dt*7));distance+=speed*dt;
  const accel=1-Math.exp(-dt*13),rate=boosting?420:285;flightVX+=(input.x*rate-flightVX)*accel;flightVY+=(input.y*rate-flightVY)*accel;
@@ -462,7 +462,7 @@ function drawBoss(){
  }
  if(boss.phase==='warning'){
   ctx.save();ctx.fillStyle='#f1bdff';ctx.textAlign='center';ctx.font='28px MidoriArcade,Arial';
-  ctx.fillText(boss.attackLabel,640,158);
+  // The attack instruction is already in the HUD.
   if(boss.attackIndex%3===1){ctx.strokeStyle='#e2a1ff';ctx.lineWidth=3;ctx.setLineDash([10,14]);ctx.beginPath();ctx.moveTo(PX+80,FLOOR-24);ctx.lineTo(800,FLOOR-24);ctx.stroke();}
   ctx.restore();
  }
