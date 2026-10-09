@@ -660,16 +660,21 @@ function bossFace(){
  const pain=boss.pain>0?Math.sin(Math.min(1,boss.pain/.18)*Math.PI/2):0;
  const blinkPhase=now%4.7,blink=blinkPhase<.28?Math.sin(blinkPhase/.28*Math.PI):0;
  const shut=Math.max(pain,blink);
- // Coordinates follow the three original eyes, including their purple lids.
- if(shut>.015){warpBossPatch(270,159,59,53,shut*.98);warpBossPatch(219,210,46,39,shut*.98);warpBossPatch(311,232,49,41,shut*.98);}
- // A restrained jaw breath keeps the painted tongue and all original teeth.
- warpBossPatch(255,312,98,79,(boss.phase==='warning'?.12:.055)*Math.sin(now*3.1));
+ // Textured eyelids cover the eyes instead of squeezing/repainting the eyeballs.
+ // All skin is sampled from the original purple lid, preserving gel highlights.
+ if(shut>.01)for(const [x,y,rx,ry,angle] of [[270,164,49,38,.18],[219,211,38,31,.2],[310,230,40,33,-.22]]){
+  c.save();c.translate(x,y);c.rotate(angle);c.beginPath();c.ellipse(0,0,rx,ry,0,0,Math.PI*2);c.clip();
+  const split=-ry+ry*2*shut,source=bossArt.width/512;
+  c.drawImage(bossArt,244*source,121*source,32*source,12*source,-rx,-ry,rx*2,Math.max(.1,split+ry));
+  if(shut>.3){c.strokeStyle='#64248a';c.lineWidth=1.4;c.beginPath();c.moveTo(-rx,split);c.quadraticCurveTo(0,split+4,rx,split);c.stroke();}
+  c.restore();
+ }
  if(boss.flash>0){c.save();c.globalCompositeOperation='source-atop';c.globalAlpha=.48*Math.sin(Math.PI*boss.flash/.14);c.fillStyle='#ff3157';c.fillRect(0,0,512,512);c.restore();}
 }
 function drawBoss(){
  if(!boss||boss.defeated)return;bossFace();const x=boss.x-distance,y=boss.y,pulse=1+Math.sin(now*2.8)*.025;
  ctx.save();ctx.translate(x-(boss.pain>0?Math.sin(boss.pain*26)*8:0),y);ctx.rotate(Math.sin(now*1.5)*.025);ctx.scale(pulse,1/pulse);ctx.imageSmoothingEnabled=true;
- const size=810;for(let i=0;i<64;i++){const sy=i*8,dx=Math.sin(now*2.8+i*.17)*3;ctx.drawImage(bossFrame,0,sy,512,8,-size/2+dx,-size/2+i*size/64,size,size/64+.5)}
+ const size=810,jaw=(boss.phase==='warning'?7:3)*Math.sin(now*3.1),mapY=y=>y+jaw*Math.exp(-Math.pow((y-345)/65,2));for(let i=0;i<64;i++){const sy=i*8,dx=Math.sin(now*2.8+i*.17)*3,top=mapY(sy),bottom=mapY(sy+8);ctx.drawImage(bossFrame,0,sy,512,8,-size/2+dx,-size/2+top*size/512,size,(bottom-top)*size/512+.5)}
  for(let i=0;i<5;i++){const t=(now*.35+i*.21)%1,a=-2.7+i*1.22,r=210+Math.sin(t*Math.PI)*94,sz=55+Math.sin(t*Math.PI)*28;ctx.globalAlpha=.5+Math.sin(t*Math.PI)*.5;ctx.drawImage(sprites[6+i%2],Math.cos(a)*r-sz/2,Math.sin(a)*r-sz/2,sz,sz)}
  ctx.globalAlpha=.3;ctx.fillStyle='#a8ffeb';for(let i=0;i<8;i++){const xx=Math.sin(now*.8+i*7)*320,yy=(i*81+now*24)%720-360;ctx.fillRect(xx,yy,9,4)}ctx.restore();
 }
