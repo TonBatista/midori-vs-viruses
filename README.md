@@ -2,12 +2,14 @@
 
 Jogo de corrida para navegador, em um único HTML com imagens, fontes e código incorporados.
 
-Uma campanha contínua em cinco mundos: o portal no fim do mundo digital leva à floresta medieval, ao céu tecnológico, à cidade cyberpunk noturna e ao núcleo do glitch, onde Midori enfrenta um chefão com três ataques.
+Uma campanha contínua em sete mundos: o portal no fim do mundo digital leva à floresta medieval, ao reino dos doces, ao castelo dos vírus zumbis, ao céu tecnológico, à cidade cyberpunk noturna e ao núcleo do glitch, onde Midori enfrenta um chefão com três ataques.
 
 - Toque à direita para pular. Após pisar num vírus, toque de novo para um pulo extra. Midori corre automaticamente. Segure à esquerda para desacelerar.
 - Computador: Espaço ou seta para cima pula; Shift desacelera; P/Esc pausa.
 - Jogue com o celular na horizontal. Abra o link HTTPS no Safari ou Chrome.
 - Na floresta, a corrida é 15% mais rápida. Há vãos largos que exigem cipó, com a área de balanço e pouso livre de inimigos. Há vírus voadores sinalizados em outros trechos. Pule para agarrar os cipós, balance e toque novamente para soltar com um mortal. Na descida, pode pisar nos vírus e ganhar mais um pulo. A floresta tem névoa clara atrás das plataformas. O urso desliza para uma pegada mais baixa; a coleta funciona durante o pêndulo e há um item central em cada vão.
+- No reino dos doces, brigadeiros diminuem a gravidade, algodão-doce desacelera e cipós atravessam rios de chocolate. Vírus de orelhas de coelho cospem balas.
+- No castelo, Midori usa túnica, capa, couro e armadura da referência medieval, com os pés só de pelo. X ou ESPADA ataca: segure para repetir combos no chão ou no ar e rebater projéteis. Cada vírus verde de caveira derrotado pela espada concede 150 pontos. Há pontes quebradas, muralhas, plataformas altas e cristais.
 - No céu, Midori pilota um hidroavião verde com óculos e cachecol lilás. As nuvens diurnas não causam dano; a velocidade base é igual à noite. O direcional esquerdo move nos quatro sentidos; segurar uma direção ativa turbo. Segure ATIRAR à direita para rajadas. No teclado: setas/WASD e Espaço para tiro. O aviso de tiro permanece até o primeiro disparo; o botão também mostra ESPAÇO.
 - Na noite cyberpunk, uma cidade em camadas com prédios em perspectiva, janelas rosas/roxas, detalhes nas fachadas, telhados e antenas, aviões distantes e desfoque atmosférico e uma luz suave atrás do avião destacam Midori. Pilote com direcional e tiro. As nuvens noturnas continuam perigosas. Os vírus sinalizam e lançam mais mísseis e rajadas de fogo; tiros também destroem os projéteis.
 - No núcleo do glitch, Midori continua no hidroavião. Use o direcional e segure ATIRAR para acertar o chefão, agora 50% maior, com movimentos amplos, expressões animadas a partir da arte original e reação vermelha de dor. A vida é de 600 pontos; os três ataques são indestrutíveis e exigem esquiva. Ele dispara orbs, mísseis e rajadas com curvas variadas; um portal digital, obeliscos e circuitos em paralaxe passam ao fundo. O chefe também libera minivírus. Abaixo de 50% de vida, entra no estágio 2 com rachaduras digitais, concede +1 vida (até cinco) e melhora o tiro em 50%. Ele fica vermelho-escuro, com olhos verde-neon e secreção digital. Os ataques ficam mais rápidos. O especial carrega por 1,8 s, trava a trajetória e dispara um raio roxo com minivírus por 1,5 s: causa 2 vidas de dano uma única vez por disparo, não pode ser destruído e exige esquiva. Depois ele fica roxo e ofegante por 2,7 s, vulnerável, antes de voltar à fúria.
@@ -18,7 +20,7 @@ Uma campanha contínua em cinco mundos: o portal no fim do mundo digital leva à
 
 Para publicar no GitHub Pages: Settings → Pages → Deploy from a branch → main → / (root) → Save. O arquivo de entrada é index.html.
 
-Na capa, use “Treinar cipós”, “Treinar voo”, “Voo noturno” e “Enfrentar chefão” para testar diretamente. Sem instalação, servidor de jogo ou dependências externas. Pontuação recorde salva apenas no próprio navegador; não há ranking online.
+Na capa, use “Treinar cipós”, “Reino dos doces”, “Castelo zumbi”, “Treinar voo”, “Voo noturno” e “Enfrentar chefão” para testar diretamente. Sem instalação, servidor de jogo ou dependências externas. Pontuação recorde salva apenas no próprio navegador; não há ranking online.
 
 Testados por simulação: voo nos quatro sentidos, diagonais, turbo, limites sem dano, controles simultâneos, cancelamento/pausa, tiros acertando inimigos, transições céu/orbital/chefão e colisões dos três ataques. Revisão atual: ataques atravessam balas, dano ativa dor/vermelho, 600 HP e batalha mínima de cerca de um minuto em condições ideais de mira. Não validado em iPhone físico.
 
