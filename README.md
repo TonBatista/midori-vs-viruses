@@ -31,3 +31,10 @@ Na capa, use “Treinar cipós”, “Reino dos doces”, “Castelo zumbi”, �
 Testados por simulação: voo nos quatro sentidos, diagonais, turbo, limites sem dano, controles simultâneos, cancelamento/pausa, tiros acertando inimigos, transições céu/orbital/chefão e colisões dos três ataques. Revisão atual: ataques atravessam balas, dano ativa dor/vermelho, 600 HP e batalha mínima de cerca de um minuto em condições ideais de mira. Não validado em iPhone físico.
 
 As marcas e artes permanecem pertencentes aos respectivos titulares. A fonte Bangers usa SIL OFL; a licença está incorporada ao HTML.
+
+## Revisão de idle, direcional e encerramento
+
+- Parado no chão, Midori respira em posição de atenção; no castelo e navio, mantém a arma em guarda com os pés apoiados.
+- Duas setas no direcional terrestre: segure a esquerda para recuar e a direita para avançar. No teclado, A/← e D/→.
+- A explosão final usa fragmentos pré-renderizados, sem desfoque por fragmento, com menos peças no celular e descarte fora da tela. A batalha deixa de ser desenhada por baixo da cena final.
+- Esta revisão foi publicada sem novos testes, conforme solicitado. Desempenho em celular físico ainda não confirmado.
